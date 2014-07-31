@@ -2,13 +2,21 @@ language: scala
 
 scala:
   - 2.11.0
-
+env:
+ global:
+  -  secure: J91umZenedGa00bLOryllyAL8Q9UJqbHXEsXUibxy/WyRT0vcRouZEroSQi+iH2l3rsx1fyBZfBR1xptxK3oZtgbKTl2b83Y0Fhyjw7HvxhogmZRIC8c020f25MbsX4Ao/Zh6tCwzBPUinlm3yjjitPJMzxH3b+S1Zi5wn5qfigoJFvv+iP1NywihQBXOUp0/LZG4RdAv+8hMx9Zozg5GDqMnskoXAvxEKKAuYrCSF8JTD8HMF+zv3A5Zh5xw/jIb9Rdfhy/ei69bHQK4C6ZEMnhIibn2dEAkCi5GFZR7SHRecCHVf/dKQyZsDqbJjFAVciYPyre3KUIDrkP3+Oxsw==
+  - a=xyz
+  - b=abc d=aaa 
 services:
   - mongodb
 
 script:
   - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
   - sbt clean scoverage:test
+  - echo $foo
+  - echo $a
+  - echo $b
+  - echo $d
 
 after_script:
   - mkdir -p shippable/codecoverage
