@@ -4,7 +4,9 @@ scala:
   - 2.11.0
 env:
  global:
-  -  secure: J91umZenedGa00bLOryllyAL8Q9UJqbHXEsXUibxy/WyRT0vcRouZEroSQi+iH2l3rsx1fyBZfBR1xptxK3oZtgbKTl2b83Y0Fhyjw7HvxhogmZRIC8c020f25MbsX4Ao/Zh6tCwzBPUinlm3yjjitPJMzxH3b+S1Zi5wn5qfigoJFvv+iP1NywihQBXOUp0/LZG4RdAv+8hMx9Zozg5GDqMnskoXAvxEKKAuYrCSF8JTD8HMF+zv3A5Zh5xw/jIb9Rdfhy/ei69bHQK4C6ZEMnhIibn2dEAkCi5GFZR7SHRecCHVf/dKQyZsDqbJjFAVciYPyre3KUIDrkP3+Oxsw==
+  - secure: gbT/dINsoOXKmXedDBtXcOBXtaCnCtB3i9I8sx4FMUizLNsQCD1NdngSwR0Ac3rAd60IW1Eud+5mt4gzDoug+svUNtroNyiFGRypWAN5+/hievHQKqVFoOJwdAjeZQ1gXiqQnNH1olQLTlKKa20mv8Kamf2d4dral6WhYNSnDKqEhGWdWfaFL0/MEyeRjT1ab916WAlf9ehhuG6u+JekgpBFBXRk0vVm2Ntzff2Y9gQag/b3lhAbvmBE9wrUANOH+7HHvr4u3BMFMil4BAzDvj7QcgX5swk23gzf95oWxlT4TzWmy6+7ekkKxxZZd6j4HE6nqaBOSJHybMENLDSWMQ==
+
+  #-  secure: J91umZenedGa00bLOryllyAL8Q9UJqbHXEsXUibxy/WyRT0vcRouZEroSQi+iH2l3rsx1fyBZfBR1xptxK3oZtgbKTl2b83Y0Fhyjw7HvxhogmZRIC8c020f25MbsX4Ao/Zh6tCwzBPUinlm3yjjitPJMzxH3b+S1Zi5wn5qfigoJFvv+iP1NywihQBXOUp0/LZG4RdAv+8hMx9Zozg5GDqMnskoXAvxEKKAuYrCSF8JTD8HMF+zv3A5Zh5xw/jIb9Rdfhy/ei69bHQK4C6ZEMnhIibn2dEAkCi5GFZR7SHRecCHVf/dKQyZsDqbJjFAVciYPyre3KUIDrkP3+Oxsw==
   - a=xyz
   - b=abc d=aaa 
 services:
@@ -13,7 +15,7 @@ services:
 script:
   - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
   - sbt clean scoverage:test
-  - echo $foo
+  - echo $Test
   - echo $a
   - echo $b
   - echo $d
