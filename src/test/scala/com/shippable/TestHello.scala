@@ -8,7 +8,7 @@ class TestStuff extends JUnitSuite {
  val calc = new HelloWorld
 
  @ Test def readHelloWorld {
- 	val result: Long = calc.returnValue("hello")
+ 	val result: Long = calc.returnValue("helo")
     assertEquals(1, result.toInt)
   }
 }
