@@ -1,13 +1,16 @@
 language: scala
 
+
 scala:
   - 2.11.0
+
   
 env:
  global:
   - secure: BP4zLSzkU+Y1FFhT5O9aVDtwRlqZYHSg904w2rw64oK/j2/UszzEdsrqC9upd/5F+GV1k7bjeeZfQeJnIt9/HiyJUPUR4EpxgiO0w4PFqd4q1JGu1gOGUx+ZbQOxhM4CO35II2LD/EbdE3vwLrSqsZRk+w+VmTM6OgQEuF50k5DxHJQZBfGHJ67IlYPhNMElUaATa3mDY1iIPe/G2UwCYn6MCP26Ldxsruw8tlkCZ1hO4arHc25kYwD918xYioJMMhuF2hOaX/MnqoipEJ/7SStsv4GjFM6hmgkcowwHhy9SfoE5mgB2/O/l8GNPS7oAHgUACS+mvy/NBsyvBut4CQ==
   - a=xyz
   - b=abc d=aaa 
+
 services:
   - mongodb
 
@@ -19,9 +22,11 @@ script:
   - echo $b
   - echo $d
 
+
 after_script:
   - mkdir -p shippable/codecoverage
   - mv target/scala-2.11/coverage-report/cobertura.xml shippable/codecoverage
+
   
 #cache: true   
 notifications: 
