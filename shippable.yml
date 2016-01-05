@@ -3,7 +3,7 @@ language: scala
 scala:
   - 2.11.0
 
-build_image: drydock/u14scapls:tip
+build_image: drydock/u14scaall:tip
 
 env:
  global:
